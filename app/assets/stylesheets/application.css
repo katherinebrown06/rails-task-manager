@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.button-area a + a {
+  margin-left: 10px;
+}
+
+.button-area {
+  width: 350px;
+}
+
+.button-area a {
+  width: 100%;
+}

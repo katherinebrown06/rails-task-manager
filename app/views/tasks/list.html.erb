@@ -1,11 +1,10 @@
 <h1>Pick a task from the list below!</h1>
 
-<p>
-<ul>
+<ul class="list-unstyled">
 <% @tasks.each do |task|%>
-  <li><%= link_to task.title, task_path(task) %> </li>
+  <li><input class="form-check-input" type="checkbox" value="" <% if task.completed? %>checked<%end%>> <%= link_to task.title, task_path(task) %> </li>
 <% end %>
 </ul>
 
-<%= link_to task.new, tasks_new_path(task) %>
+<%= link_to 'add new', tasks_new_path, class: "btn btn-success" %>
 </p>
